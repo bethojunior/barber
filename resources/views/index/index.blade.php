@@ -11,7 +11,6 @@
     <div class="modal-content">
         <h4>Agende seu horário</h4>
         <div class="col l12 m12 s12">
-            <hr>
             <div class="input-field" style="margin-top: 5vh">
                 <input id="name_user" type="text">
                 <label for="name_user">Seu nome</label>
