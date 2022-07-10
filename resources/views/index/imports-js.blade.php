@@ -28,18 +28,14 @@
        })
     });
 
-    elementProperty.addEventInElement('#share_app','click', ()=> {
-        if (navigator.share) {
-            navigator.share({
-                title: 'Agende seu corte na ' + APP_NAME,
-                url: 'https://madgic.com.br/'
-            }).then(() => {
-                console.log('Compartilhado com sucesso!');
-            })
-                .catch(console.error);
-        } else {
-            // fallback
-        }
+    elementProperty.addEventInElement('#share_app','onclick', function (){
+        navigator.share({
+            title: 'Agende seu corte na ' + APP_NAME,
+            url: 'https://madgic.com.br/'
+        }).then(() => {
+            console.log('Compartilhado com sucesso!');
+        })
+            .catch(console.error);
     })
 
     function initNav()
