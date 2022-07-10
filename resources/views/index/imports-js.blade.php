@@ -17,12 +17,21 @@
 
     elementProperty.addEventInElement('#save-schedule','onclick', function (){
        SwalCustom.confirm('Deseja confirmar sua reserva?',).then(response => {
-           if(response)
-               return SwalCustom.messageDialog('Seu horário foi confirmado','👻 Oba!','success');
+           if(response){
+               SwalCustom.messageDialog('Seu horário foi confirmado','👻 Oba!','success');
+               return closenav();
+           }
 
-           return SwalCustom.messageDialog('Tente novamente em outro horário','🙁','error');
+           SwalCustom.messageDialog('Tente novamente em outro horário','🙁','error');
+           return closenav();
        })
     });
+
+    function closenav()
+    {
+        $('.button-collapse').sideNav('destroy');
+        $('#modal-schedule').modal('open');
+    }
 
     setTimeout( () => {
         elementProperty.getElement('.side-nav' , nav => {
