@@ -35,7 +35,7 @@
 {{--    <li><a href="#!"><i class="material-icons">share</i>Compartilhe com um amigo</a></li>--}}
     <li><a id="open-modal-schedule">Marcar meu horário</a></li>
     <li><a href="#!">Clientes</a></li>
-    <li><a href="#!">Compartilhe com um amigo</a></li>
+    <li><a id="share_app">Compartilhe com um amigo</a></li>
     <li><div class="divider"></div></li>
 
 </ul>

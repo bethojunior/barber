@@ -6,6 +6,7 @@
 
 
 <script>
+    const APP_NAME = 'Madgic';
 
     $(".button-collapse").sideNav();
     $('.modal').modal();
@@ -26,6 +27,20 @@
            return closeModalSchedule();
        })
     });
+
+    elementProperty.addEventInElement('#share_app','click', ()=> {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Agende seu corte na ' + APP_NAME,
+                url: 'https://madgic.com.br/'
+            }).then(() => {
+                console.log('Compartilhado com sucesso!');
+            })
+                .catch(console.error);
+        } else {
+            // fallback
+        }
+    })
 
     function initNav()
     {
