@@ -1,2 +1,9 @@
 @extends('index.tags')
-ok
+@extends('index.imports-css')
+@extends('index.imports-js')
+
+
+@extends('index.load')
+
+
+@extends('index.nav')

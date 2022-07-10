@@ -1,0 +1,33 @@
+.load-page{
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    right: 0!important;
+    text-align: center!important;
+    padding-top: 25vh!important;
+    background: white!important;
+    height: 100%!important;
+    opacity: 0.7!important;
+}
+.load-page-off{
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    right: 0!important;
+    text-align: center!important;
+    padding-top: 25vh!important;
+    background: white!important;
+    height: 0%!important;
+    opacity: 0!important;
+    transition: 3s!important;
+    z-index: -99!important;
+}
+.progress{
+    margin: 0!important;
+}
+.progress-off{
+    margin: 0!important;
+    opacity: 0!important;
+    transition: 3s!important;
+    z-index: -99!important;
+}
