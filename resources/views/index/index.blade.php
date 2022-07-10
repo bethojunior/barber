@@ -1,1 +1,2 @@
-oi ?
+@extends('index.tags')
+ok
