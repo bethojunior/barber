@@ -27,20 +27,7 @@
            return closeModalSchedule();
        })
     });
-
-    elementProperty.addEventInElement('#share_app','onclick', function (){
-        const shareData = {
-            title: 'MDN',
-            text: 'Learn web development on MDN!',
-            url: 'https://developer.mozilla.org'
-        }
-        try {
-            navigator.share(shareData)
-            console.log('MDN shared successfully')
-        } catch(err) {
-            console.log(err)
-        }
-    })
+    
 
     function initNav()
     {
@@ -60,5 +47,24 @@
         elementProperty.addClass('.load-page' , 'load-page-off')
         elementProperty.addClass('.progress' , 'progress-off')
     },500)
+
+
+    const shareData = {
+        title: 'MDN',
+        text: 'Aprenda desenvolvimento web no MDN!',
+        url: 'https://developer.mozilla.org',
+    }
+
+    const btn = document.querySelector('#share_app');
+
+    // Deve ser acionado algum tipo de "ativação do usuário"
+    btn.addEventListener('click', async () => {
+        try {
+            await navigator.share(shareData)
+        } catch(err) {
+            console.log(err)
+        }
+        console.log('ok')
+    });
 
 </script>
