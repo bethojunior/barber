@@ -18,9 +18,9 @@
     elementProperty.addEventInElement('#save-schedule','onclick', function (){
        SwalCustom.confirm('Deseja confirmar sua reserva?',).then(response => {
            if(response)
-               return SwalCustom.confirm('success','👻 Oba! Seu horário foi confirmado');
+               return SwalCustom.messageDialog('👻 Oba! Seu horário foi confirmado','success');
 
-           return SwalCustom.confirm('error','🙁. Tente novamente em outro horário');
+           return SwalCustom.messageDialog('🙁. Tente novamente em outro horário','error');
        })
     });
 
