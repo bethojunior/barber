@@ -17,13 +17,30 @@
     })
 
     elementProperty.addEventInElement('#save-schedule','onclick', function (){
+
+        let name  = document.getElementById('name_user').value;
+        let phone = document.getElementById('phone_user').value;
+        let date = document.getElementById('date').value;
+        let description = document.getElementById('description').value;
+
+        let params = {'name' : name , 'phone' : phone , 'schedule' : date, 'description' : description};
+
+
+
        SwalCustom.confirm('Deseja confirmar sua reserva?',).then(response => {
            if(response){
-               SwalCustom.messageDialog('Seu horário foi confirmado','👻 Oba!','success');
-               return closeModalSchedule();
-           }
+               $.ajax({
+                   method: "POST",
+                   url: "/api/schedule/create",
+                   data: params
+               }).done(function(response){
+                   if(response == 1) {
+                       SwalCustom.messageDialog('Seu horário foi confirmado','👻 Oba!','success');
+                       return closeModalSchedule();
+                   }
+               })
 
-           SwalCustom.messageDialog('Tente novamente em outro horário','🙁','error');
+           }
            return closeModalSchedule();
        })
     });
@@ -42,7 +59,21 @@
         }
     })
 
-    elementProperty.addEventInElement()
+    elementProperty.addEventInElement('#date','onchange', () => {
+        elementProperty.getElement('#date', date => {
+            date = date.value;
+            $.ajax({
+                method: "POST",
+                url: "/api/check-available",
+                data: { 'date': date }
+            })
+            .done(function(response){
+                if(response == 1)
+                    return SwalCustom.messageDialog('Horário já está ocupado','','info');
+            })
+        })
+    })
+
 
     function initNav()
     {
