@@ -34,7 +34,7 @@
                    url: "/api/schedule/create",
                    data: params
                }).done(function(response){
-                   if(response == 1) {
+                   if(response.id !== null) {
                        SwalCustom.messageDialog('Seu horário foi confirmado','👻 Oba!','success');
                        return closeModalSchedule();
                    }
@@ -71,8 +71,6 @@
                     if(response.length !== 0)
                         return SwalCustom.messageDialog('Horário já está ocupado','','info');
 
-                    SwalCustom.messageDialog('Seu horário foi confirmado','👻 Oba!','success');
-                    return closeModalSchedule();
                 })
         })
     })
