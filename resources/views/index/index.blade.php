@@ -12,7 +12,8 @@
         <h4>Agende seu horário</h4>
         <div class="col l12 m12 s12">
             <input type="text" placeholder="Seu nome">
-            <input type="datetime-local">
+            <input placeholder="Dia e hora" type="datetime-local">
+            <textarea class="materialize-textarea" id="" cols="30" rows="10" placeholder="Observações"></textarea>
         </div>
     </div>
     <div class="modal-footer">
