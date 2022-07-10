@@ -29,13 +29,17 @@
     });
 
     elementProperty.addEventInElement('#share_app','onclick', function (){
-        navigator.share({
-            title: 'Agende seu corte na ' + APP_NAME,
-            url: 'https://madgic.com.br/'
-        }).then(() => {
-            console.log('Compartilhado com sucesso!');
-        })
-            .catch(console.error);
+        const shareData = {
+            title: 'MDN',
+            text: 'Learn web development on MDN!',
+            url: 'https://developer.mozilla.org'
+        }
+        try {
+            navigator.share(shareData)
+            console.log('MDN shared successfully')
+        } catch(err) {
+            console.log(err)
+        }
     })
 
     function initNav()
