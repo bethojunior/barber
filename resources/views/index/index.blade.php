@@ -15,6 +15,10 @@
                 <input id="name_user" type="text">
                 <label for="name_user">Seu nome</label>
             </div>
+            <div class="input-field" style="margin-top: 5vh">
+                <input id="phone_user" type="text">
+                <label for="phone_user">N° Telefone</label>
+            </div>
             <div class="input-field">
                 <input id="date" type="datetime-local">
                 <label for="date">Dia e hora</label>
