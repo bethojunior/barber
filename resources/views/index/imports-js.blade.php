@@ -67,12 +67,16 @@
                 url: "/api/check-available",
                 data: { 'date': date }
             })
-            .done(function(response){
-                if(response.length !== 0)
-                    return SwalCustom.messageDialog('Horário já está ocupado','','info');
-            })
+                .done(function(response){
+                    if(response.length !== 0)
+                        return SwalCustom.messageDialog('Horário já está ocupado','','info');
+
+                    SwalCustom.messageDialog('Seu horário foi confirmado','👻 Oba!','success');
+                    return closeModalSchedule();
+                })
         })
     })
+
 
 
     function initNav()
