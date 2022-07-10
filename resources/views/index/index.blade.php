@@ -11,9 +11,19 @@
     <div class="modal-content">
         <h4>Agende seu horário</h4>
         <div class="col l12 m12 s12">
-            <input type="text" placeholder="Seu nome">
-            <input placeholder="Dia e hora" type="datetime-local">
-            <textarea class="materialize-textarea" id="" cols="30" rows="10" placeholder="Observações"></textarea>
+            <hr>
+            <div class="input-field" style="margin-top: 5vh">
+                <input id="name_user" type="text">
+                <label for="name_user">Seu nome</label>
+            </div>
+            <div class="input-field">
+                <input id="date" type="datetime-local">
+                <label for="date">Dia e hora</label>
+            </div>
+            <div class="input-field">
+                <textarea class="materialize-textarea" id="description" cols="30" rows="10"></textarea>
+                <label for="description">Observações</label>
+            </div>
         </div>
     </div>
     <div class="modal-footer">
