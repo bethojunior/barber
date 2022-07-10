@@ -19,18 +19,23 @@
        SwalCustom.confirm('Deseja confirmar sua reserva?',).then(response => {
            if(response){
                SwalCustom.messageDialog('Seu horário foi confirmado','👻 Oba!','success');
-               return closenav();
+               return closeModalSchedule();
            }
 
            SwalCustom.messageDialog('Tente novamente em outro horário','🙁','error');
-           return closenav();
+           return closeModalSchedule();
        })
     });
 
-    function closenav()
+    function initNav()
     {
-        $('.button-collapse').sideNav('destroy');
-        $('#modal-schedule').modal('open');
+        $(".button-collapse").sideNav();
+    }
+
+    function closeModalSchedule()
+    {
+        $(".button-collapse").sideNav();
+        $('#modal-schedule').modal('close');
     }
 
     setTimeout( () => {
