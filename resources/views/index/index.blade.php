@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Finalizar</a>
+        <a id="save-schedule" class="waves-effect waves-green btn-flat">Finalizar</a>
     </div>
 </div>
 
