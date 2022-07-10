@@ -5,6 +5,12 @@
 
 <script>
     $(".button-collapse").sideNav();
+    $('.modal').modal();
+
+    elementProperty.addEventInElement('#open-modal-schedule','onclick', function (){
+        $('.button-collapse').sideNav('destroy');
+        $('#modal-schedule').modal('open');
+    })
 
     setTimeout( () => {
         elementProperty.getElement('.side-nav' , nav => {

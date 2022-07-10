@@ -33,7 +33,7 @@
 {{--    <li><a href="#!"><i class="material-icons">bookmark_border</i>Marcar meu horário</a></li>--}}
 {{--    <li><a href="#!"><i class="material-icons">star_border</i>Clientes</a></li>--}}
 {{--    <li><a href="#!"><i class="material-icons">share</i>Compartilhe com um amigo</a></li>--}}
-    <li><a href="#!">Marcar meu horário</a></li>
+    <li><a id="open-modal-schedule">Marcar meu horário</a></li>
     <li><a href="#!">Clientes</a></li>
     <li><a href="#!">Compartilhe com um amigo</a></li>
     <li><div class="divider"></div></li>
