@@ -10,7 +10,10 @@
 <div id="modal-schedule" class="modal bottom-sheet">
     <div class="modal-content">
         <h4>Agende seu horário</h4>
-        <p>A bunch of text</p>
+        <div class="col l12 m12 s12">
+            <input type="text" placeholder="Seu nome">
+            <input type="datetime-local">
+        </div>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Finalizar</a>
