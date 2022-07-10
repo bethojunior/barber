@@ -26,17 +26,18 @@ class ScheduleController extends Controller
     {
         $create = $this->service
             ->create($request->all());
+
         return $create;
     }
 
     /**
      * @param IsAvailableScheduleRequest $request
-     * @return false
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
      */
     public function is_available(IsAvailableScheduleRequest $request){
-//        dd($request->all());
+        $teste = '2022-07-10T16:59';
         $date = Carbon::parse($request->input('date'))->format('d/m/y H:m');
-        return 1;
+
         return $this->service
             ->verifyIfIsAvailable($request->date);
     }

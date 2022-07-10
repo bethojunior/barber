@@ -68,7 +68,7 @@
                 data: { 'date': date }
             })
             .done(function(response){
-                if(response == 1)
+                if(response.length !== 0)
                     return SwalCustom.messageDialog('Horário já está ocupado','','info');
             })
         })
